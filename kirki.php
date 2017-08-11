@@ -30,7 +30,11 @@ if ( class_exists( 'Kirki' ) ) {
 }
 
 // Include the autoloader.
-include_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'class-kirki-autoload.php';
+include_once dirname( __FILE__ ) . '/class-kirki-autoload.php';
+
+if ( file_exists( dirname( __FILE__ ) . '/controls/kirki-controls.php' ) ) {
+	include_once dirname( __FILE__ ) . '/controls/kirki-controls.php';
+}
 new Kirki_Autoload();
 
 if ( ! defined( 'KIRKI_PLUGIN_FILE' ) ) {
