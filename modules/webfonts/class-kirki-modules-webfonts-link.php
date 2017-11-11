@@ -128,6 +128,7 @@ final class Kirki_Modules_Webfonts_Link {
 		}
 
 		// Are we force-loading all subsets?
+		$this->subsets = array();
 		if ( true === Kirki_Fonts_Google::$force_load_all_subsets ) {
 
 			if ( isset( $this->googlefonts->fonts[ $font ]['subsets'] ) ) {
